@@ -51,7 +51,7 @@
     int statusBarOffsetInPoints = 20.0;
     int standardRectLeftOffset = self.view.frame.size.width/16.0;
     int standardRectWidth = self.view.frame.size.width*(14.0/16.0);
-    int standardRectHeight = self.view.frame.size.height*(2.0/16.0);
+    int standardRectHeight = self.view.frame.size.height*(1.0/16.0);
     int standardInterRectSpacing = self.view.frame.size.height*(2.0/128.0);
     
     self.coolButton.frame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0, standardRectWidth, standardRectHeight);

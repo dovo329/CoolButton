@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A53004661AD30AD10093671C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53004641AD30AD10093671C /* ViewController.m */; };
 		A553E1F31AD2F312006CDD6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E1F21AD2F312006CDD6B /* main.m */; };
 		A553E1F61AD2F312006CDD6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E1F51AD2F312006CDD6B /* AppDelegate.m */; };
 		A553E1FE1AD2F312006CDD6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A553E1FD1AD2F312006CDD6B /* Images.xcassets */; };
 		A553E20D1AD2F312006CDD6B /* CoolButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E20C1AD2F312006CDD6B /* CoolButtonTests.m */; };
-		A553E2181AD2F37F006CDD6B /* CoolButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E2171AD2F37F006CDD6B /* CoolButton.m */; };
+		A5A9B0131AD34EEC0014656A /* CoolButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A9B0101AD34EEC0014656A /* CoolButton.m */; };
+		A5A9B0141AD34EEC0014656A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A9B0121AD34EEC0014656A /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,8 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A53004631AD30AD10093671C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
-		A53004641AD30AD10093671C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		A553E1ED1AD2F312006CDD6B /* CoolButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A553E1F11AD2F312006CDD6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A553E1F21AD2F312006CDD6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -37,8 +35,10 @@
 		A553E2061AD2F312006CDD6B /* CoolButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A553E20B1AD2F312006CDD6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A553E20C1AD2F312006CDD6B /* CoolButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoolButtonTests.m; sourceTree = "<group>"; };
-		A553E2161AD2F37F006CDD6B /* CoolButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoolButton.h; sourceTree = SOURCE_ROOT; };
-		A553E2171AD2F37F006CDD6B /* CoolButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoolButton.m; sourceTree = SOURCE_ROOT; };
+		A5A9B00F1AD34EEC0014656A /* CoolButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoolButton.h; sourceTree = "<group>"; };
+		A5A9B0101AD34EEC0014656A /* CoolButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoolButton.m; sourceTree = "<group>"; };
+		A5A9B0111AD34EEC0014656A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A5A9B0121AD34EEC0014656A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +80,10 @@
 		A553E1EF1AD2F312006CDD6B /* CoolButton */ = {
 			isa = PBXGroup;
 			children = (
-				A53004631AD30AD10093671C /* ViewController.h */,
-				A53004641AD30AD10093671C /* ViewController.m */,
-				A553E2161AD2F37F006CDD6B /* CoolButton.h */,
-				A553E2171AD2F37F006CDD6B /* CoolButton.m */,
+				A5A9B00F1AD34EEC0014656A /* CoolButton.h */,
+				A5A9B0101AD34EEC0014656A /* CoolButton.m */,
+				A5A9B0111AD34EEC0014656A /* ViewController.h */,
+				A5A9B0121AD34EEC0014656A /* ViewController.m */,
 				A553E1F41AD2F312006CDD6B /* AppDelegate.h */,
 				A553E1F51AD2F312006CDD6B /* AppDelegate.m */,
 				A553E1FD1AD2F312006CDD6B /* Images.xcassets */,
@@ -216,10 +216,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A553E2181AD2F37F006CDD6B /* CoolButton.m in Sources */,
 				A553E1F61AD2F312006CDD6B /* AppDelegate.m in Sources */,
-				A53004661AD30AD10093671C /* ViewController.m in Sources */,
 				A553E1F31AD2F312006CDD6B /* main.m in Sources */,
+				A5A9B0141AD34EEC0014656A /* ViewController.m in Sources */,
+				A5A9B0131AD34EEC0014656A /* CoolButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

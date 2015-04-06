@@ -10,14 +10,10 @@
 
 @class CoolButton;
 
-
 @interface ViewController : UIViewController
-
 @property (nonatomic, strong) IBOutlet CoolButton * coolButton;
 
 - (IBAction)hueValueChanged:(id)sender;
 - (IBAction)saturationValueChanged:(id)sender;
 - (IBAction)brightnessValueChanged:(id)sender;
-
 @end
-

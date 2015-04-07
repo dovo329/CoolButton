@@ -59,6 +59,10 @@
     CGRect outerRect = CGRectInset(self.bounds, outerMargin, outerMargin);
     CGMutablePathRef outerPath = createRoundedRectForRect(outerRect, 20.0);
     
+    CGFloat innerMargin = 3.0f;
+    CGRect innerRect = CGRectInset(outerRect, innerMargin, innerMargin);
+    CGMutablePathRef innerPath = createRoundedRectForRect(innerRect, 20.0);
+    
     /*
     if (self.state != UIControlStateHighlighted) {
         CGContextSaveGState(context);
@@ -73,6 +77,12 @@
     CGContextAddPath(context, outerPath);
     CGContextClip(context);
     drawGlossAndGradient(context, outerRect, outerTop.CGColor, outerBottom.CGColor);
+    CGContextRestoreGState(context);
+    
+    CGContextSaveGState(context);
+    CGContextAddPath(context, innerPath);
+    CGContextClip(context);
+    drawGlossAndGradient(context, innerRect, innerTop.CGColor, innerBottom.CGColor);
     CGContextRestoreGState(context);
 }
 

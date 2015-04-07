@@ -48,7 +48,7 @@
     
     CGFloat outerMargin = 5.0f;
     CGRect outerRect = CGRectInset(self.bounds, outerMargin, outerMargin);
-    CGMutablePathRef outerPath = createRoundedRectForRect(outerRect, 6.0);
+    CGMutablePathRef outerPath = createRoundedRectForRect(outerRect, 20.0);
     
     if (self.state != UIControlStateHighlighted) {
         CGContextSaveGState(context);

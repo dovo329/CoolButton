@@ -43,6 +43,7 @@
     else if(Orientation==UIDeviceOrientationPortrait)
     {
     }
+    [self.coolButton setNeedsDisplay];
 }
 
 - (void)coolButtonHandler {

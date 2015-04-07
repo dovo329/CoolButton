@@ -7,6 +7,7 @@
 //
 
 #import "CoolButton.h"
+#import "Common.h"
 
 @implementation CoolButton
 
@@ -33,13 +34,30 @@
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
+    /*
     UIColor * color = [UIColor
                        colorWithHue:self.hue
                          saturation:self.saturation
                          brightness:self.brightness
                               alpha:1.0];
     CGContextSetFillColorWithColor(context, color.CGColor);
-    CGContextFillRect(context, self.bounds);
+    CGContextFillRect(context, self.bounds);*/
+    
+    UIColor * outerTop = [UIColor colorWithHue:self.hue saturation:self.saturation brightness:self.brightness alpha:1.0];
+    UIColor * shadowColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.5];
+    
+    CGFloat outerMargin = 5.0f;
+    CGRect outerRect = CGRectInset(self.bounds, outerMargin, outerMargin);
+    CGMutablePathRef outerPath = createRoundedRectForRect(outerRect, 6.0);
+    
+    if (self.state != UIControlStateHighlighted) {
+        CGContextSaveGState(context);
+        CGContextSetFillColorWithColor(context, outerTop.CGColor);
+        CGContextSetShadowWithColor(context, CGSizeMake(0, 2), 3.0, shadowColor.CGColor);
+        CGContextAddPath(context, outerPath);
+        CGContextFillPath(context);
+        CGContextRestoreGState(context);
+    }
 }
 
 -(void) setHue:(CGFloat)hue

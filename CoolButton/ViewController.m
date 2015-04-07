@@ -60,25 +60,25 @@
     int standardRectHeight = self.view.frame.size.height*(1.0/16.0);
     int standardInterRectSpacing = self.view.frame.size.height*(2.0/128.0);
     
-    self.coolButton.frame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0, standardRectWidth, standardRectHeight);
+    self.coolButton.frame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0, standardRectWidth, standardRectHeight*4.0);
 
-    CGRect hueLabelFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(1.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
+    CGRect hueLabelFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(4.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
     [self.hueLabel setFrame:hueLabelFrame];
     
-    CGRect hueSliderFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(2.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
+    CGRect hueSliderFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(5.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
     [self.hueSlider setFrame:hueSliderFrame];
     
     
-    CGRect saturationLabelFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(3.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
+    CGRect saturationLabelFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(6.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
     [self.saturationLabel setFrame:saturationLabelFrame];
     
-    CGRect saturationSliderFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(4.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
+    CGRect saturationSliderFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(7.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
     [self.saturationSlider setFrame:saturationSliderFrame];
     
-    CGRect brightnessLabelFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(5.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
+    CGRect brightnessLabelFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(8.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
     [self.brightnessLabel setFrame:brightnessLabelFrame];
     
-    CGRect brightnessSliderFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(6.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
+    CGRect brightnessSliderFrame = CGRectMake(standardRectLeftOffset, statusBarOffsetInPoints+1.0+(9.0*(standardRectHeight+standardInterRectSpacing)), standardRectWidth, standardRectHeight);
     [self.brightnessSlider setFrame:brightnessSliderFrame];
     
 }

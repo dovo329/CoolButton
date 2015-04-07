@@ -43,13 +43,23 @@
     CGContextSetFillColorWithColor(context, color.CGColor);
     CGContextFillRect(context, self.bounds);*/
     
-    UIColor * outerTop = [UIColor colorWithHue:self.hue saturation:self.saturation brightness:self.brightness alpha:1.0];
+    
+    UIColor * blackColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
+    UIColor * highlightStart = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.4];
+    UIColor * highlightStop = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.1];
     UIColor * shadowColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.5];
+    
+    UIColor * outerTop = [UIColor colorWithHue:self.hue saturation:self.saturation brightness:1.0*self.brightness alpha:1.0];
+    UIColor * outerBottom = [UIColor colorWithHue:self.hue saturation:self.saturation brightness:0.80*self.brightness alpha:1.0];
+    UIColor * innerStroke = [UIColor colorWithHue:self.hue saturation:self.saturation brightness:0.80*self.brightness alpha:1.0];
+    UIColor * innerTop = [UIColor colorWithHue:self.hue saturation:self.saturation brightness:0.90*self.brightness alpha:1.0];
+    UIColor * innerBottom = [UIColor colorWithHue:self.hue saturation:self.saturation brightness:0.70*self.brightness alpha:1.0];
     
     CGFloat outerMargin = 5.0f;
     CGRect outerRect = CGRectInset(self.bounds, outerMargin, outerMargin);
     CGMutablePathRef outerPath = createRoundedRectForRect(outerRect, 20.0);
     
+    /*
     if (self.state != UIControlStateHighlighted) {
         CGContextSaveGState(context);
         CGContextSetFillColorWithColor(context, outerTop.CGColor);
@@ -57,7 +67,13 @@
         CGContextAddPath(context, outerPath);
         CGContextFillPath(context);
         CGContextRestoreGState(context);
-    }
+    }*/
+    
+    CGContextSaveGState(context);
+    CGContextAddPath(context, outerPath);
+    CGContextClip(context);
+    drawGlossAndGradient(context, outerRect, outerTop.CGColor, outerBottom.CGColor);
+    CGContextRestoreGState(context);
 }
 
 -(void) setHue:(CGFloat)hue

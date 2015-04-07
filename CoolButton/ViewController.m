@@ -24,6 +24,12 @@
 
 @implementation ViewController
 
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
 -(void)OrientationDidChange:(NSNotification*)notification
 {
     UIDeviceOrientation Orientation=[[UIDevice currentDevice]orientation];

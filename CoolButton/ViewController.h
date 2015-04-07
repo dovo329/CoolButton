@@ -11,6 +11,9 @@
 @class CoolButton;
 
 @interface ViewController : UIViewController
+
+-(NSUInteger)supportedInterfaceOrientations;
+
 @property (nonatomic, strong) IBOutlet CoolButton * coolButton;
 
 - (IBAction)hueValueChanged:(id)sender;
